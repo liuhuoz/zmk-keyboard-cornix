@@ -34,11 +34,11 @@ include:
     shield: settings_reset
     artifact-name: keyboard_reset
 
-  - board: seeeduino_xiao_ble
-    shield: cornix_yads dongle_screen
-    snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: yads_dongle
+#  - board: seeeduino_xiao_ble
+#    shield: cornix_yads dongle_screen
+#    snippet: zmk-usb-logging
+#    cmake-args: -DCONFIG_ZMK_STUDIO=y
+#    artifact-name: yads_dongle
 
 #  - board: seeeduino_xiao_ble
 #    shield: cornix_prospector prospector_adapter
@@ -47,6 +47,6 @@ include:
 #   artifact-name: prospector_dongle
 
 
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
-    artifact-name: dongle_reset
+#  - board: seeeduino_xiao_ble
+#    shield: settings_reset
+#    artifact-name: dongle_reset
