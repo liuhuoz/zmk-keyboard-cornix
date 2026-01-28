@@ -13,14 +13,14 @@
 #
 ---
 include:
-  - board: cornix_dongle
-    shield: cornix_dongle_eyelash dongle_display
-    snippet: studio-rpc-usb-uart
-    artifact-name: cornix_dongle
+#  - board: cornix_dongle
+#    shield: cornix_dongle_eyelash dongle_display
+#    snippet: studio-rpc-usb-uart
+#    artifact-name: cornix_dongle
 
-  - board: cornix_left
-    #shield: cornix_indicator
-    artifact-name: cornix_left_default
+#  - board: cornix_left
+#    #shield: cornix_indicator
+#    artifact-name: cornix_left_default
 
   - board: cornix_ph_left
     #shield: cornix_indicator
@@ -32,19 +32,19 @@ include:
 
   - board: cornix_right
     shield: settings_reset
-    artifact-name: reset
+    artifact-name: keyboard_reset
 
   - board: seeeduino_xiao_ble
     shield: cornix_yads dongle_screen
-    snippet: studio-rpc-usb-uart
+    snippet: zmk-usb-logging
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: yads_dongle
 
-  - board: seeeduino_xiao_ble
-    shield: cornix_prospector prospector_adapter
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: prospector_dongle
+#  - board: seeeduino_xiao_ble
+#    shield: cornix_prospector prospector_adapter
+#    snippet: studio-rpc-usb-uart
+#    cmake-args: -DCONFIG_ZMK_STUDIO=y
+#   artifact-name: prospector_dongle
 
 
   - board: seeeduino_xiao_ble
