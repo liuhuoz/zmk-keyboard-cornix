@@ -21,6 +21,7 @@
 #define THUMBS LH1 LH0 RH0 RH1
 #define KEYS_T LH1 LH0 RH0 RH1
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15
+#define ZMK_MOUSE_SCRL_VAL 140
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -94,6 +95,8 @@
             label = "SCROLL_UP_DOWN";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
+            tap-ms = <20>;
         };
     };
 
