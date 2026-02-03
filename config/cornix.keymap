@@ -132,10 +132,10 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &kp E  &kp R  &kp T                            &kp Y           &kp U  &kp I  &kp O      &kp P          &kp BACKSPACE
-&kp CAPS          &kp A         &kp S         &kp D  &kp F  &kp G                            &kp H           &kp J  &kp K  &kp L      &kp BACKSLASH  &kp ENTER
-&kp LSHFT         &kp Z         &kp X         &kp C  &kp V  &kp B      &mkp MB3  &kp C_MUTE  &kp B           &kp N  &kp M  &kp COMMA  &kp PERIOD     &kp SLASH
-&kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1  &mo 2  &kp SPACE                        &kp_mo 5 SPACE  &mo 3  &mo 4  &left_TD   &down_TD       &right_TD
+&kp ESCAPE        &kp Q         &kp W         &kp E  &kp R  &kp T                                 &kp Y           &kp U  &kp I  &kp O      &kp P          &kp BACKSPACE
+&kp CAPS          &kp A         &kp S         &kp D  &kp F  &kp G                                 &kp H           &kp J  &kp K  &kp L      &kp BACKSLASH  &kp ENTER
+&kp LSHFT         &kp Z         &kp X         &kp C  &kp V  &kp B           &mkp MB3  &kp C_MUTE  &kp B           &kp N  &kp M  &kp COMMA  &kp PERIOD     &kp SLASH
+&kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1  &mo 2  &kp_mo 3 SPACE                        &kp_mo 5 SPACE  &mo 3  &mo 4  &left_TD   &down_TD       &right_TD
             >;
 
             sensor-bindings =
@@ -152,7 +152,9 @@
 &none      &none             &none             &none             &none             &none                          &kp ENTER         &kp BACKSPACE  &none       &none          &none             &none
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>;
         };
 
         lower_layer {
@@ -170,10 +172,10 @@
         raise_layer {
             display-name = "Raise";
             bindings = <
-&none  &none  &none  &none  &none  &none                &none  &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp KP_NUMBER_0  &none
-&none  &none  &none  &none  &none  &none                &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none            &none
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none            &kp LS(SLASH)
-&none  &none  &none  &none  &none  &none                &none  &none            &none            &kp KP_NUMBER_0  &none            &none
+&none  &none  &none  &none  &none  &none                &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp KP_NUMBER_0  &trans
+&none  &none  &none  &none  &none  &none                &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS        &trans
+&none  &none  &none  &none  &none  &none  &none  &none  &kp KP_MULTIPLY  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp LS(SLASH)
+&none  &none  &none  &none  &none  &none                &none            &none            &none            &kp KP_NUMBER_0  &kp KP_DOT       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -182,10 +184,10 @@
         green_layer {
             display-name = "Green";
             bindings = <
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &kp MINUS       &kp EQUAL       &kp DELETE
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &kp LS(MINUS)   &kp LS(EQUAL)   &kp PAGE_UP
-&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none           &kp UP_ARROW    &kp PAGE_DOWN
-&none  &none  &none  &none  &none  &none                &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&none  &none  &none  &none  &none  &none                    &none  &none  &none  &kp MINUS       &kp EQUAL       &kp DELETE
+&none  &none  &none  &none  &none  &none                    &none  &none  &none  &kp LS(MINUS)   &kp LS(EQUAL)   &kp PAGE_UP
+&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none           &kp UP_ARROW    &kp PAGE_DOWN
+&none  &none  &none  &none  &none  &kp SPACE                &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
 
             sensor-bindings =
