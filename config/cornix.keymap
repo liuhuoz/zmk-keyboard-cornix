@@ -22,7 +22,6 @@
 #define KEYS_T LH1 LH0 RH0 RH1
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 15
 
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -148,7 +147,7 @@
             display-name = "Orange";
             bindings = <
 &kp GRAVE  &kp NUMBER_1      &kp N2            &kp N3            &kp N4            &kp N5                         &kp N6            &kp N7         &kp N8      &kp N9         &kp N0            &kp DEL
-&kp TAB    &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                     &kp LS(NUMBER_6)  &kp LS(N7)     &kp LS(N8)  &kp SEMICOLON      &kp SINGLE_QUOTE  &none
+&kp TAB    &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                     &kp LS(NUMBER_6)  &kp LS(N7)     &kp LS(N8)  &kp SEMICOLON  &kp SINGLE_QUOTE  &none
 &none      &none             &none             &none             &none             &none       &kp HOME  &kp END  &none             &none          &none       &kp LS(COMMA)  &kp LS(PERIOD)    &none
 &none      &none             &none             &none             &none             &none                          &kp ENTER         &kp BACKSPACE  &none       &none          &none             &none
             >;
@@ -183,10 +182,10 @@
         green_layer {
             display-name = "Green";
             bindings = <
-&bt BT_CLR    &none  &none  &none  &none  &none                &none  &none  &none  &kp MINUS         &kp EQUAL          &kp DELETE
-&bt BT_SEL 0  &none  &none  &none  &none  &none                &none  &none  &none  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PAGE_UP
-&bt BT_SEL 1  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none             &kp UP_ARROW       &kp PAGE_DOWN
-&bt BT_SEL 2  &none  &none  &none  &none  &none                &none  &none  &none  &kp LEFT_ARROW    &kp DOWN_ARROW     &kp RIGHT_ARROW
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &kp MINUS       &kp EQUAL       &kp DELETE
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &kp LS(MINUS)   &kp LS(EQUAL)   &kp PAGE_UP
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none           &kp UP_ARROW    &kp PAGE_DOWN
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
 
             sensor-bindings =
@@ -194,13 +193,17 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
-        layer_5 {
+        shortcut_layer {
             bindings = <
-&none  &none     &kp UP    &none      &none  &none                &none  &none  &none  &kp LA(MINUS)   &none             &none
-&none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none                &none  &none  &none  &none           &kp LS(LC(SEMI))  &kp LC(RET)
-&none  &none     &none     &none      &none  &none  &none  &none  &none  &none  &none  &none           &msc SCRL_UP      &none
-&none  &none     &none     &none      &none  &none                &none  &none  &none  &msc SCRL_LEFT  &msc SCRL_DOWN    &msc SCRL_RIGHT
+&bt BT_CLR    &none           &msc SCRL_UP    &none            &none  &none                &none  &none     &kp UP_ARROW  &kp LA(MINUS)   &none             &none
+&bt BT_SEL 0  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none  &none                &none  &kp LEFT  &kp DOWN      &kp RIGHT       &kp LS(LC(SEMI))  &kp LC(RET)
+&bt BT_SEL 1  &none           &none           &none            &none  &none  &none  &none  &none  &none     &none         &none           &msc SCRL_UP      &none
+&bt BT_SEL 2  &none           &none           &none            &none  &none                &none  &none     &none         &msc SCRL_LEFT  &msc SCRL_DOWN    &msc SCRL_RIGHT
             >;
         };
+
+        extra1 { status = "reserved"; };
+
+        extra2 { status = "reserved"; };
     };
 };
