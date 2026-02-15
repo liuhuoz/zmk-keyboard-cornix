@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/urob
     - name: janpfischer
       url-base: https://github.com/janpfischer
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
     - name: prospector
       url-base: https://github.com/t-ogura
   projects:
