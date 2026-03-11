@@ -189,10 +189,10 @@
         green_layer {
             display-name = "Green";
             bindings = <
-&none  &none  &none  &none  &none  &none                    &none  &none  &none  &kp MINUS       &kp EQUAL       &kp DELETE
-&none  &none  &none  &none  &none  &none                    &none  &none  &none  &kp LS(MINUS)   &kp LS(EQUAL)   &kp PAGE_UP
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none  &none  &none           &kp UP_ARROW    &kp PAGE_DOWN
-&none  &none  &none  &none  &none  &kp SPACE                &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&none  &none  &none  &none         &none             &none                     &none  &none  &none  &kp MINUS       &kp EQUAL       &kp DELETE
+&none  &none  &none  &none         &none             &none                     &none  &none  &none  &kp LS(MINUS)   &kp LS(EQUAL)   &kp PAGE_UP
+&none  &none  &none  &none         &none             &none       &none  &none  &none  &none  &none  &none           &kp UP_ARROW    &kp PAGE_DOWN
+&none  &none  &none  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT                &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
 
             sensor-bindings =
