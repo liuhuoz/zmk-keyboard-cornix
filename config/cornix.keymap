@@ -137,9 +137,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp ESCAPE        &kp Q         &kp W         &kp E  &kp R  &kp T                                 &kp Y           &kp U  &kp I  &kp O      &kp P          &kp BACKSPACE
-&kp CAPS          &kp A         &kp S         &kp D  &kp F  &kp G                                 &kp H           &kp J  &kp K  &kp L      &kp BACKSLASH  &kp ENTER
-&kp LSHFT         &kp Z         &kp X         &kp C  &kp V  &kp B           &mkp MB3  &kp C_MUTE  &kp B           &kp N  &kp M  &kp COMMA  &kp PERIOD     &kp SLASH
+&kp ESCAPE        &kp Q         &kp W         &kp E  &kp R  &kp T                            &kp Y           &kp U  &kp I  &kp O      &kp P          &kp BACKSPACE
+&kp CAPS          &kp A         &kp S         &kp D  &kp F  &kp G                            &kp H           &kp J  &kp K  &kp L      &kp BACKSLASH  &kp ENTER
+&kp LSHFT         &kp Z         &kp X         &kp C  &kp V  &kp B      &mkp MB3  &kp C_MUTE  &kp B           &kp N  &kp M  &kp COMMA  &kp PERIOD     &kp SLASH
 &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1  &mo 2  &kp SPACE                        &kp_mo 5 SPACE  &mo 3  &mo 4  &left_TD   &down_TD       &right_TD
             >;
 
@@ -189,10 +189,10 @@
         green_layer {
             display-name = "Green";
             bindings = <
-&none  &none  &none  &none         &none             &none                     &none  &none  &none  &kp MINUS       &kp EQUAL       &kp DELETE
-&none  &none  &none  &none         &none             &none                     &none  &none  &none  &kp LS(MINUS)   &kp LS(EQUAL)   &kp PAGE_UP
-&none  &none  &none  &none         &none             &none       &none  &none  &none  &none  &none  &none           &kp UP_ARROW    &kp PAGE_DOWN
-&none  &none  &none  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHIFT                &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&none  &none           &kp UP_ARROW  &none            &none             &none                     &none  &none  &none  &kp MINUS       &kp EQUAL       &kp DELETE
+&none  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &none             &none                     &none  &none  &none  &kp LS(MINUS)   &kp LS(EQUAL)   &kp PAGE_UP
+&none  &none           &none         &none            &none             &none       &none  &none  &none  &none  &none  &none           &kp UP_ARROW    &kp PAGE_DOWN
+&none  &none           &none         &kp LEFT_ALT     &kp LEFT_CONTROL  &kp LSHIFT                &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
             >;
 
             sensor-bindings =
@@ -201,6 +201,7 @@
         };
 
         shortcut_layer {
+            display-name = "Shortcut";
             bindings = <
 &bt BT_CLR    &none           &msc SCRL_UP    &none            &none  &none                &none  &none     &kp UP_ARROW  &kp LA(MINUS)   &none             &none
 &bt BT_SEL 0  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &none  &none                &none  &kp LEFT  &kp DOWN      &kp RIGHT       &kp LS(LC(SEMI))  &kp LC(RET)
