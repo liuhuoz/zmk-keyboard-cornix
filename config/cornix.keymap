@@ -176,7 +176,7 @@
         };
 
         raise_layer {
-            display-name = "Rais";
+            display-name = "Rase";
             bindings = <
 &none  &none  &none  &none  &none  &none                &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp KP_NUMBER_0  &trans
 &none  &none  &none  &none  &none  &none                &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS        &trans
