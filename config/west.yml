@@ -35,7 +35,7 @@ manifest:
     #  clone-depth: 1
     - name: prospector-zmk-module
       remote: prospector
-      revision: v2.1.0  # Latest version
+      revision: v2.2.0 #update to 2.2.0
       path: modules/prospector-zmk-module
   self:
     path: config
