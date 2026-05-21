@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: hitsmaxft
       url-base: https://github.com/hitsmaxft
-    - name: hitsmaxft
+    - name: liuhuoz
       url-base: https://github.com/liuhuoz
     - name: urob
       url-base: https://github.com/urob
