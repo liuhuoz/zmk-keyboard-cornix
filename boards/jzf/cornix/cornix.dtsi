@@ -16,6 +16,7 @@
     chosen {
         zmk,kscan = &kscan0;
 		zmk,physical-layout = &layout_50;
+        zephyr,console = &cdc_acm_uart;
     };
 
 
@@ -67,7 +68,13 @@
     };
 
     chosen {
-        zmk,bttery = &vbatt;
+        zmk,battery = &vbatt;
     };
 
+};
+
+&zephyr_udc0 {
+    cdc_acm_uart: cdc_acm_uart {
+        compatible = "zephyr,cdc-acm-uart";
+    };
 };
