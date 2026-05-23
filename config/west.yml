@@ -25,7 +25,7 @@ manifest:
       clone-depth: 1
     - name: zmk-rgbled-widget
       remote: liuhuoz
-      revision: main
+      revision: dev
       clone-depth: 1
     - name: zmk-dongle-display
       remote: hitsmaxft
