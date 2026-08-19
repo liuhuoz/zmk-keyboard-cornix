@@ -18,9 +18,8 @@ manifest:
       url-base: https://github.com/liuhuoz
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
-      clone-depth: 1
+      remote: cormoran
+      revision: main+dya
       import:
         file: app/west.yml
     - name: zmk-helpers
@@ -49,6 +48,36 @@ manifest:
       revision: main
       clone-depth: 1
     - name: zmk-module-runtime-input-processor
+      remote: cormoran
+      revision: main
+      clone-depth: 1
+
+    - name: zmk-behavior-runtime-sensor-rotate
+      remote: cormoran
+      revision: feat/custom-settings-storage
+      clone-depth: 1
+    - name: zmk-feature-custom-settings
+      remote: cormoran
+      revision: main
+      clone-depth: 1
+    - name: zmk-feature-runtime-combo
+      remote: cormoran
+      revision: main
+      clone-depth: 1
+    - name: zmk-feature-runtime-macro
+      remote: cormoran
+      revision: main
+      clone-depth: 1
+    - name: zmk-feature-os-detection
+      remote: cormoran
+      revision: main
+      clone-depth: 1
+    - name: zmk-feature-default-layer
+      remote: cormoran
+      revision: codex/custom-rpc-rewrite
+      import: true
+      clone-depth: 1
+    - name: zmk-feature-device-info
       remote: cormoran
       revision: main
       clone-depth: 1
