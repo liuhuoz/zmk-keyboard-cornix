@@ -58,7 +58,21 @@ manifest:
     #  clone-depth: 1
     - name: prospector-zmk-module
       remote: prospector
-      revision: v2.2.2
+      revision: v2.2.3
       path: modules/prospector-zmk-module
+    # urob series module for keymap and layer management.
+    - name: zmk-tri-state
+      remote: urob
+      revision: main
+    - name: zmk-leader-key
+      remote: urob
+      revision: main
+    - name: zmk-auto-layer
+      remote: urob
+      revision: main
+    - name: zmk-adaptive-key
+      remote: urob
+      revision: main
+
   self:
     path: config
