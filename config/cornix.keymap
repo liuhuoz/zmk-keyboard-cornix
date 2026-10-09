@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors/num_word.dtsi> 
+
 #include <zmk-helpers/helper.h>
 #include "includes/cornix54.h"
 #include <behaviors.dtsi>
@@ -121,6 +121,18 @@
             quick-tap-ms = <250>;
         };
 
+        // modified from urob num_word
+        num_word: num_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <
+                BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL   /* urob default */
+                KP_DOT KP_PLUS KP_MULTIPLY KP_DIVIDE KP_MINUS KP_NUMLOCK   /* add num pad */
+            >;
+            ignore-numbers;
+        };
+
+
         smart_num: smart_num {
             compatible = "zmk,behavior-hold-tap";
             label = "SMART_NUM";
@@ -191,7 +203,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                  &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9        &kp KP_NUMBER_0  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &kp KP_DIVIDE    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS        &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_MULTIPLY  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp LS(SLASH)
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans           &trans           &trans           &kp KP_NUMBER_0  &kp KP_DOT       &trans
+&trans  &trans  &trans  &trans  &trans  &K_CANCEL               &trans           &trans           &trans           &kp KP_NUMBER_0  &kp KP_DOT       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
