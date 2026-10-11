@@ -76,6 +76,11 @@
             key-positions = <0 1>;
         };
 
+        lead_BT {
+            bindings = <&lead_BT>;
+            key-positions = <5 6>;
+        };
+
     };
 
     behaviors {
@@ -171,6 +176,19 @@
             bindings = <&mo>, <&auto_mouse>;
 
             tapping-term-ms = <200>;
+        };
+
+        lead_BT: lead_BT {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            usb { sequence = <U S B>; bindings = <&out OUT_USB>; };
+            ble { sequence = <B L E>; bindings = <&out OUT_BLE>; };
+            bt0 { sequence = <B Q>; bindings = <&bt BT_SEL 0>; };
+            bt1 { sequence = <B W>; bindings = <&bt BT_SEL 1>; };
+            bt2 { sequence = <B E>; bindings = <&bt BT_SEL 2>; };
+            bt3 { sequence = <B R>; bindings = <&bt BT_SEL 3>; };
+            bt4 { sequence = <B T>; bindings = <&bt BT_SEL 4>; };
+            btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; };
         };
 
     };
