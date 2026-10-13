@@ -76,6 +76,11 @@
             key-positions = <0 1>;
         };
 
+        lead_BT {
+            bindings = <&lead_BT>;
+            key-positions = <5 6>;
+        };
+
     };
 
     behaviors {
@@ -173,6 +178,19 @@
             tapping-term-ms = <200>;
         };
 
+        lead_BT: lead_BT {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            usb { sequence = <U S B>; bindings = <&out OUT_USB>; };
+            ble { sequence = <B L E>; bindings = <&out OUT_BLE>; };
+            bt0 { sequence = <B Q>; bindings = <&bt BT_SEL 0>; };
+            bt1 { sequence = <B W>; bindings = <&bt BT_SEL 1>; };
+            bt2 { sequence = <B E>; bindings = <&bt BT_SEL 2>; };
+            bt3 { sequence = <B R>; bindings = <&bt BT_SEL 3>; };
+            bt4 { sequence = <B T>; bindings = <&bt BT_SEL 4>; };
+            btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; };
+        };
+
     };
 
     /* ===== behavior alias define ===== */
@@ -220,10 +238,10 @@
         lower_layer {
             display-name = "Lowr";
             bindings = <
-&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                &kp F6  &kp F7      &kp F8  &kp F9        &kp F10        &kp F11
-&none  &none   &none   &none   &none   &none                 &none   &none       &none   &kp LS(SEMI)  &kp LS(APOS)   &kp F12
-&none  &none   &none   &none   &none   &none   &none  &none  &none   &none       &none   &none         &kp PAGE_UP    &kp HOME
-&none  &none   &none   &none   &none   &none                 &none   &kp DELETE  &none   &none         &kp PAGE_DOWN  &kp END
+&kp LS(GRAVE)  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                &kp F6  &kp F7      &kp F8  &kp F9        &kp F10        &kp F11
+&kp LS(TAB)    &none   &none   &none   &none   &none                 &none   &none       &none   &kp LS(SEMI)  &kp LS(APOS)   &kp F12
+&none          &none   &none   &none   &none   &none   &none  &none  &none   &none       &none   &none         &kp PAGE_UP    &kp HOME
+&none          &none   &none   &none   &none   &none                 &none   &kp DELETE  &none   &none         &kp PAGE_DOWN  &kp END
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
